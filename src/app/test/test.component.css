@@ -1,0 +1,29 @@
+.main{width:500px; background-color: #fff; padding: 15px; margin-bottom: 15px;}
+.head { padding-bottom:15px; border-bottom:solid 1px #90caf9; margin-bottom: 15px;}
+.UserPicture {width:50px; height:50px; background-color:#90caf9;border-radius: 50px; display: inline-block; vertical-align: middle; overflow: hidden;}
+.UserName{font-weight: bold; font-size: 15px; text-transform: uppercase; color:#656060}
+.UpdateTime {color:darkgray}
+.PostType{background-color: #e9f4fe; padding: 15px; margin-bottom: 15px; border:solid 1px #c5e3fc}
+input {width: 100%; padding: 12px 15px; box-sizing: border-box; border: solid 1px #90caf9; outline: none; color: #6a6c6d;}
+.CommentSection ul {margin: 0 0 15px 0; padding: 0;}
+.CommentSection ul li {list-style: none; }
+.CommentSection ul li ul {background-color:#e9f4fe; padding: 10px; margin-top: 5px; margin-left: 40px;}
+.CommentSection ul li ul input {padding: 8px 15px;}
+.MainPicture {width:28px; height:28px; background-color:#c5e3fc; display: inline-block; overflow: hidden; vertical-align: top;}
+.MainComment {background-color:#fdfdfd; padding:6px 10px; margin-left: 12px; display: inline-block; width: calc(100% - 64px); vertical-align: top; border: solid 1px #c5e3fc;}
+.SubComment {margin-bottom:5px;}
+.postType img {width:100%;}
+.postTypeContent{max-height: 240px; overflow-y: auto;}
+.main{
+
+    margin-left: auto;
+    margin-right: auto;
+    width: 30em;
+    border-width:5px;
+border-style:solid;
+border-color:#9cf79f;
+}
+.UpdatePicture{
+    width:100%;
+}
+.UpdateContent{max-height: 240px; overflow-y: auto;}

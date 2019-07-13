@@ -1,0 +1,53 @@
+<div class="main" *ngFor="let userinfo of UserInfo">
+    <div class="infoset">
+        <div class="head">
+            <div class="UserName">{{userinfo.UserName}}</div>
+            <div class="UpdateTime">{{userinfo.UpdateTime}}</div>
+            <div class="UserPicture"><img src="{{userinfo.UserPicture}}" /></div>
+        </div>
+        <div class="Posttype" *ngIf="userinfo.UpdatePicture; then imageDiv else contentDiv"></div>
+
+        <div class PostType>
+            <ng-template #imageDiv>
+                <div class="UpdatePicture"><img src="{{userinfo.UpdatePicture}}" /></div>
+            </ng-template>
+            <ng-template #contentDiv>
+                <div class="UpdateContent">{{userinfo.UpdateContent}}</div>
+            </ng-template>
+        </div>
+        <div class="CommentSection">
+            <ul>
+                <li *ngFor="let commentpart of userinfo.CommentPart">
+                    <div class="maincomment">
+                        <div class="MainName">{{commentpart.MainName}}</div>
+                        <div class="MainPicture"><img src="{{commentpart.MainPicture}}" /></div>
+                        <div class="MainComment">{{commentpart.MainComment}}</div>
+                    </div>
+                    <ul>
+                        <li *ngFor="let commentpartreply1 of commentpart.Sub1Comment">
+                            <div class="SubComment">
+                                <div class="Sub1Name">{{commentpartreply1.Sub1Name}}</div>
+                                <div class="Sub1Picture"><img src="{{commentpartreply1.Sub1Picture}}" /></div>
+                                <div class="Sub1Comment">{{commentpartreply1.Sub1Comment}}</div>
+                            </div>
+
+                            <ul>
+                                <li *ngFor="let commentpartreply2 of commentpartreply1.Sub2Comment">
+                                    <div class="Sub1Name">{{commentpartreply2.Sub2Name}}</div>
+                                    <div class="Sub1Picture"><img src="{{commentpartreply2.Sub2Picture}}" /></div>
+                                    <div class="Sub1Comment">{{commentpartreply2.Sub2Comment}}</div>
+                                </li>
+
+                            </ul>
+                            <input class="postComment" placeholder="Type your comment" />
+                        </li>
+
+                    </ul>
+
+                </li>
+            </ul>
+
+            <input class="postComment" placeholder="Type your comment" />
+        </div>
+    </div>
+</div>
