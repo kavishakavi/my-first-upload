@@ -5,9 +5,9 @@
             <div class="UpdateTime">{{userinfo.UpdateTime}}</div>
             <div class="UserPicture"><img src="{{userinfo.UserPicture}}" /></div>
         </div>
-        <div class="Posttype" *ngIf="userinfo.UpdatePicture; then imageDiv else contentDiv"></div>
 
-        <div class PostType>
+        <div class="Posttype" *ngIf="userinfo.UpdatePicture; then imageDiv else contentDiv"></div>
+        <div class="PostType">
             <ng-template #imageDiv>
                 <div class="UpdatePicture"><img src="{{userinfo.UpdatePicture}}" /></div>
             </ng-template>
@@ -15,6 +15,7 @@
                 <div class="UpdateContent">{{userinfo.UpdateContent}}</div>
             </ng-template>
         </div>
+        
         <div class="CommentSection">
             <ul>
                 <li *ngFor="let commentpart of userinfo.CommentPart">
